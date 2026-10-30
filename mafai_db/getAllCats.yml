@@ -1,6 +1,7 @@
 info:
-  name: Untitled 1
+  name: getAllCats
   type: http
+  seq: 1
 
 http:
   method: GET

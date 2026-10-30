@@ -1,10 +1,10 @@
 import express from "express"
 import cors from "cors"
+process.loadEnvFile(".env")
 import { router as catRouter} from "./src/router/cat.router.js"
 import { router as clanRouter} from "./src/router/clan.router.js"
 
 
-process.loadEnvFile(".env")
 
 const PORT = process.env.PORT || 8080
 

@@ -1,7 +1,7 @@
 import express from "express"
+import { getRegions } from "../controller/cat.controller.js"
+
 
 export const router = new express.Router()
 
-router.get("/clan", (req, res)=>{
-    res.sendStatus(418)
-})
+router.get("/region", getRegions)
