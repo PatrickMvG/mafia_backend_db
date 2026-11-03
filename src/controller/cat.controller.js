@@ -1,4 +1,4 @@
-import { allCats, allRegions } from "../service/cat.service.js";
+import { allCats, createNewDon} from "../service/cat.service.js";
 
 // Hier werden die http request und response behandelt
 export async function getCats(req, res){
@@ -6,7 +6,10 @@ export async function getCats(req, res){
     res.status(200).json(cats)
 }
 
-export async function getRegions(req, res){
-    const region = await allRegions()
-    res.status(200).json(region)
+export async function createDon(req, res){
+    const result = await createNewDon(req.body)
+    res.status(201).json(result)
 }
+
+
+

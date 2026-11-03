@@ -1,7 +1,8 @@
 import express from "express"
-import { getRegions } from "../controller/cat.controller.js"
-
+import {getClans, createNewClan} from "../controller/clan.controller.js"
 
 export const router = new express.Router()
 
-router.get("/region", getRegions)
+router.get("/clan", getClans)
+
+router.post("/clan/new", createNewClan)
